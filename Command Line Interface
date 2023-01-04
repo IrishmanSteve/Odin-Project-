@@ -1,3 +1,37 @@
 The shell is a program where users can type commands.
 With the shell, it’s possible to invoke complicated programs like climate modeling software,
 Or simple commands that create an empty directory with only one line of code.
+
+To find out where you are you can type 'pwd' which stands for 'Print Working Directory'
+Directories are like places — at any time while we are using the shell, we are in exactly one place called our 'current working directory'.
+
+Example:  
+
+$ pwd                     - Prints "/home/stephen" on Linux and "C:\Users\Steve" on windows
+
+There are 2 meanings for the / character. 
+When it appears at the front of a file or directory name, it refers to the ROOT DIRECTORY, that holds everything else.
+When it appears inside a path, it’s just a separator.
+so '/Users/Steve'  means - root > Users > Steve
+
+$ ls                      - lists everything in the current directory, an example would be "Desktop  Documents  Music  Photos" etc.
+
+you can also add "-F" to make the output more comprehensible like so
+
+$ ls -F                   - lists it like this "Desktop/  Documents/  Music/  Photos/"
+
+a trailing "/" means its a directory
+a "@" means its a file
+a "*" means its a executable
+
+$ clear                   - will clear the terminal, but you can still use the arrow keys to see past commands
+
+the "--help" option will tell you how to use the command like so
+
+$ ls --help
+
+you can also use:
+
+$ man ls                 - will turn it into a terminal where you can search for specific words with the "/word"
+                         - man stands for manual
+
