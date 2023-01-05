@@ -60,3 +60,36 @@ In the following case, we’re moving thesis/draft.txt to thesis/quotes.txt, whi
 
 $ mv thesis/draft.txt thesis/quotes.txt                   - Changes or (moves) thesis/draft.txt     into    thesis/quotes.txt
 
+
+'mkdir' is not limited to creating single directories one at a time. 
+The '-p' option allows mkdir to create a directory with nested subdirectories in a single operation:
+
+$ mkdir -p ../project/data ../project/results             - This created 3 folders named project, data, and results
+                                                          - Note: it wouldn't create a project folder if it already existed
+
+$ cp                     - Works the same way as $ mv but instead of moving it, it will copy it.
+                         - Can copy many files and directories at once, as long as the last argument is a directory name
+
+$ rm                     - Removes files so that if you check for it with $ ls it should say "No such file or directory"
+                         - Only works on FILES, not directories (folders) unless you use $ rm -r / $ rm -r -i to be safe
+
+* is a wildcard, which matches zero or more characters
+? is also a wildcard, but it matches exactly one character.
+
+Examples of how to use both are below: 
+
+*.pdb matches ethane.pdb, propane.pdb, and every file that ends with ‘.pdb’. 
+p*.pdb only matches pentane.pdb and propane.pdb.
+
+?ethane.pdb would match methane.pdb whereas 
+*ethane.pdb matches both ethane.pdb, and methane.pdb.
+
+Which ls command(s) will produce this output?
+
+            ethane.pdb methane.pdb
+
+1. - $ ls *t*ane.pdb
+2. - $ ls *t?ne.*
+3. - $ ls *t??ne.pdb            - Answer
+4. - $ ls ethane.
+
