@@ -24,6 +24,7 @@ So if you wanted to order files so that the most recently changed appears LAST, 
 you can also add "-F" to make the output more comprehensible like so
 
 $ ls -F                   - lists it like this "Desktop/  Documents/  Music/  Photos/"
+$ ls -a                   - means "show all"
 
 a trailing "/" means its a directory
 a "@" means its a file
@@ -50,5 +51,12 @@ $ cd Desktop
 If we want to go back up the chain or directories, you use the shortcut of
 
 $ cd ..                  - “the directory containing this one”, or more succinctly, the parent of the current directory.
+$ cd -                   - Takes you into the previous directory I was in, similar but not the same as above.
 
-$ ls -a                  - means "show all"
+$ mv                     - can move a file to somewhere else, change the name of it, and overwrite previous data
+
+The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. 
+In the following case, we’re moving thesis/draft.txt to thesis/quotes.txt, which has the same effect as renaming the file. 
+
+$ mv thesis/draft.txt thesis/quotes.txt                   - Changes or (moves) thesis/draft.txt     into    thesis/quotes.txt
+
