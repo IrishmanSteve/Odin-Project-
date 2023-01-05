@@ -15,6 +15,11 @@ When it appears inside a path, it’s just a separator.
 so '/Users/Steve'  means - root > Users > Steve
 
 $ ls                      - lists everything in the current directory, an example would be "Desktop  Documents  Music  Photos" etc.
+                          - is in Alphabetical order
+$ ls -r                   - is in reverse-Alphabetical order       
+$ ls -t                   - lists items in order of when they were recently changed being the 1st
+
+So if you wanted to order files so that the most recently changed appears LAST, you could use     $ ls -rt
 
 you can also add "-F" to make the output more comprehensible like so
 
@@ -35,3 +40,15 @@ you can also use:
 $ man ls                 - will turn it into a terminal where you can search for specific words with the "/word"
                          - man stands for manual
 
+$ cd                     - stands for 'Change Directory' within the shell. It's the equivalent to clicking on files in a GUI.
+                         - example:
+                         
+$ cd Users
+$ cd Steve
+$ cd Desktop
+
+If we want to go back up the chain or directories, you use the shortcut of
+
+$ cd ..                  - “the directory containing this one”, or more succinctly, the parent of the current directory.
+
+$ ls -a                  - means "show all"
