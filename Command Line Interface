@@ -159,6 +159,10 @@ $ head -n 3 sorted-lengths.txt                    - would print the first 3 line
 
 The $ head command will print the first few lines of a file, depending on the specified number after '-n _'
 The $ tail command will print the last few lines of a file, depending on the specified number after '-n _'
+An example of how both would be formatted is below:
+
+$ head -n 2 animal.csv > animals-subset.csv       - prints the first 2 animals into a file called animals-subset.csv
+$ tail -n 3 animal.csv >> animals-subset.csv      - appended the last 3 animals into the same file, rather than overwriting it, as we used (>>)
 
 The difference between the operator '>' and '>>' is that
 > will overwrite the file with your data
@@ -167,3 +171,13 @@ The difference between the operator '>' and '>>' is that
 So if you kept running the following commands, it would give 2 different outcomes
 $ echo hello > testfile01.txt                      - would keep overwriting the same file with one word 'hello'
 $ echo hello >> testfile02.txt                     - would keep appending the word 'hello' to the same file
+
+In shell a (|) is called a PIPE because it allows you chain commands together by PIPING the output of 1 command into another.
+This means you don't have to create intermediate files like 'sorted-files.txt. as you could pipe together something like so:
+
+$ sort -n lengths.txt | head -n 1                  - sorts from lowest to highest, pipes the output so that head prints the first line
+9  methane.pdb                                     - output
+
+$ wc -l *.pdb | sort -n | head -n 2                - counts how many lines each .pdb file has, sorts numerically, and prints the first 2 .pdb files
+
+
