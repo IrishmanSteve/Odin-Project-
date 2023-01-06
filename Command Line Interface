@@ -180,4 +180,15 @@ $ sort -n lengths.txt | head -n 1                  - sorts from lowest to highes
 
 $ wc -l *.pdb | sort -n | head -n 2                - counts how many lines each .pdb file has, sorts numerically, and prints the first 2 .pdb files
 
+The $ cut command is used to remove or ‘cut out’ certain sections of each line in the file
+Cut expects the lines to be separated into columns by a Tab character. 
+A character used in this way is a called a DELIMITER. 
+Below is an example of the $ cut command with the '-d' option which allows you to separate the files by a character other than TAB such as comma (,):
+
+$ cut -d , -f 2 animals.csv
+
+The -f option to specify that we want to extract the second field (column).
+
+
+The $ uniq command filters out adjacent matching lines in a file.
 
