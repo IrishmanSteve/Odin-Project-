@@ -93,3 +93,77 @@ Which ls command(s) will produce this output?
 3. - $ ls *t??ne.pdb            - Answer
 4. - $ ls ethane.
 
+$ wc        - is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).
+
+
+An example of it in use would be: 
+
+$ wc cubane.pdb                             - Would print   >    20  156 1158 cubane.pdb
+
+If you instead wanted to see the wc for a few different files, you could write:
+
+$ wc *.pdb
+
+And this would print out something like: 
+
+                                               30  246  1828  octane.pdb
+                                               21  165  1226  pentane.pdb
+                                               15  111  825   propane.pdb
+                                               66  522  3879  total
+And if you only wanted it to count one thing, you'd add an option to wc like so:
+
+$ wc -l             - Counts lines
+$ wc -m             - Counts characters
+$ wc -w             - Counts words
+
+If you forget to give it something to count like above, it will sit there waiting for you do give it something, you can exit this state with Ctrl+C
+
+If you needed to check 1000 files to see which had the fewest lines, you could do this:
+
+$ wc -l *.pdb > lengths.txt
+
+The greater than (>) sign in shell will redirect the output of the command into a file, rather than printing it to the screen
+Note: if the file exists, it will be overwritten without warning, and if it doesn't it will now be created.
+A simple way to check if it now exists is to type:
+
+$ ls lengths.txt
+
+Next we can use the command $ cat (concatenate) to print the output to the screen like so:
+
+$ cat lengths.txt
+
+30  octane.pdb
+21  pentane.pdb
+15  propane.pdb
+66  total
+
+The $ cat command may dump more info than you need though so sometimes using $ less will be better and it will only fill the screen. 
+Space bar to go forward a page & 'b' to go back.
+
+The $ sort command can help to sort but if you use it as is, it will print numbers in ALPHANUMERIC order (10, 15, 2, 27, 3, 45)
+The $ sort -n command will now print the numbers in NUMERIC order like so: (2, 3, 10, 15, 27, 45)
+
+The $ sort command does NOT change the file to this, it only prints it to the screen.
+
+$ sort -n lengths.txt                             - would print out:
+
+15  propane.pdb
+21  pentane.pdb
+30  octane.pdb
+66  total
+
+We can put the sorted list of lines in another temporary file called sorted-lengths.txt by putting > sorted-lengths.txt after the command like so:
+
+$ sort -n lengths.txt > sorted-lengths.txt
+$ head -n 3 sorted-lengths.txt                    - would print the first 3 lines of sorted-lengths.txt because of the '-n 3
+
+The $ head command will print the first few lines of a file, depending on the specified number after '-n _'
+The $ tail command will print the last few lines of a file, depending on the specified number after '-n _'
+
+The difference between the operator '>' and '>>' is that
+> will overwrite the file with your data
+>> will append the data to the file
+
+So if you kept running the following commands, it would give 2 different outcomes
+$ echo hello > testfile01.txt                      - would keep overwriting the same file with one word 'hello'
+$ echo hello >> testfile02.txt                     - would keep appending the word 'hello' to the same file
