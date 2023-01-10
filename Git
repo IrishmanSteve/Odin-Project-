@@ -1,0 +1,11 @@
+Git allows you to view every change in your work when you saved it, compared to a text editor which only ever saves over what you had. 
+A save in Git records differences in the files and folders AND keeps a historical record of each save.
+
+As an individual developer, Git enables you to review how your project grows and to easily look at or restore file states from the past. 
+Once connected to a network, Git allows you to push your project to GitHub or other alternatives such as: 
+
+- Bitbucket
+- Beanstalk
+- GitLab 
+
+for sharing and collaborating with other developers.
