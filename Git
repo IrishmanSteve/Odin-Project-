@@ -9,3 +9,36 @@ Once connected to a network, Git allows you to push your project to GitHub or ot
 - GitLab 
 
 for sharing and collaborating with other developers.
+
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+This is why graphic designers and web developers like to use a Version Control System. 
+So they keep keep every version of an image or layout.
+It allows you to:
+- Revert selected files, or the entire project back to a previous state
+- Compare changes over time
+- See who last modified something
+- See who introduced an issue and when
+- Recover lost files
+- Fix screw ups
+
+A major issue that people encounter is that they need to collaborate with developers on other systems. 
+To deal with this problem, Centralized Version Control Systems (CVCSs) were developed. 
+These systems (such as CVS, Subversion, and Perforce) have a single server that contains all the versioned files. 
+They also have a number of clients that check out files from that central place. 
+For many years, this has been the standard for version control.
+
+This setup offers many advantages over local VCSs. For example, everyone knows to a certain degree what everyone else on the project is doing. 
+Administrators have fine-grained control over who can do what, and 
+it’s easier to administer a CVCS than it is to deal with local databases on every client.
+
+DISADVANTAGES OF CVCS
+- Its a single point of failure so if the server goes down, nobody can work, save or collaborate.
+- If the hard disk with the central database becomes corrupted, and no backups were kept, you lose everything. (local VCS can also suffer this)
+
+This is where Distributed Version Control Systems (DVCSs) like Git, step in. In a DVCS, every clone is really a full backup of all the data.
+clients don’t just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. 
+Thus, if any server dies, and these systems were collaborating via that server, any client repositories can be copied back up to the server to restore it
+
+With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. 
+To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. 
+Git thinks about its data more like a stream of snapshots.
