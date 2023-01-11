@@ -46,6 +46,37 @@ In a DVCS, such as Git, every clone is really a full backup of all the data.
 clients don’t just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. 
 Thus, if any server dies, and these systems were collaborating via that server, any client repositories can be copied back up to the server to restore it
 
-With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. 
+With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment,
+and stores a reference to that snapshot.
 To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. 
 Git thinks about its data more like a stream of snapshots.
+
+Most operations in Git only require LOCAL access. This has many ADVANTAGES:
+- No dependency on latency unlike CVCS'
+- Can work offline and commit work and upload it later
+- Can browse entire project history and changes locally
+
+
+Everything in Git is checksummed. This means that nothing can be changed without Git knowing about it.
+What Git uses for this is the SHA-1 hash which is a 40 character string in hexadecimal (0-9 & a-f)    e.g. 24b9da6552252987aa493b52f8696cd6d3b00373
+Git stores everything in its database not by file name but by the hash value of its contents so you see this a lot.
+After you commit a snapshot into Git, it is very difficult to lose, especially if you regularly push your database to another repository
+This means its much less stressful to changes things as we can experiment without the danger of severely screwing things up.
+
+
+Git has three main states that your files can reside in:
+- MODIFIED means that you have changed the file but have not committed it to your database yet.
+- STAGED means that you have marked a modified file in its current version to go into your next commit snapshot.
+- COMMITTED means that the data is safely stored in your local database.
+
+Which leads us to the three main sections of a Git project: 
+- The WORKING TREE is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory 
+  and placed on disk for you to use or modify.
+- The STAGING AREA is  file, generally contained in your Git directory, that stores information about what will go into your next commit. Can also
+  be called the "index" in Git.
+- The GIT DIRECTORY is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what 
+  is copied when you clone a repository from another computer.
+
+
+
+
