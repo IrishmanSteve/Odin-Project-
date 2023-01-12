@@ -102,3 +102,9 @@ For example,
 - git add . is read as                   git | add       | ., where the period represents everything in the current directory;
 - git commit -m "message" is read as     git | commit -m | "message"; and
 - git status is read as                  git | status    | (no destination).
+
+One good habit to develop is ATMOIC COMMITS.
+An Atomic Commit is a commit that includes changes related to only one feature or task of your program. 
+There are 2 main reasons for doing this: 
+- if something you change causes some problems, it's easy to revert the specific change without losing other changes; 
+- it enables you to write better commit messages
