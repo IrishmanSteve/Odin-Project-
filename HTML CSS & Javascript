@@ -1,0 +1,9 @@
+Relative links are when something links to another page on the same website. To do this, the files should be saved in the same folder.
+It does not include the domain name as it assumes it will be the same.
+Relative links only include the file path to the other page RELATIVE to the page you are creating the link on.
+Below is an example of a relative link with 'pages/' as it is in a file called 'pages'
+<a href="pages/about.html">About</a>
+If it wasn't in a separate file, it would simply be 'about.html'
+
+Prepending ./ before the link will prevent some issues. 
+By adding ./ you are specifying to your code that it should start looking for the file/directory RELATIVE to the CURRENT directory.
