@@ -7,3 +7,10 @@ If it wasn't in a separate file, it would simply be 'about.html'
 
 Prepending ./ before the link will prevent some issues. 
 By adding ./ you are specifying to your code that it should start looking for the file/directory RELATIVE to the CURRENT directory.
+
+IMAGE FORMATS
+
+Jpg - JPG's are designed for handling large color palettes without exorbitantly increasing file size.
+Png - PNG's an excellent fit for icons, technical diagrams, logos, etc but will take up more memory than a JPG.
+SVG - SVG's is a vector-based graphics format, meaning it can scale up or down to any dimension without loss of quality. Use when possible.
+Gif - GIF's are the go-to option for simple animations. Only real reason to use them.
