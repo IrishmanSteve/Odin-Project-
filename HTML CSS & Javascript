@@ -14,3 +14,62 @@ Jpg - JPG's are designed for handling large color palettes without exorbitantly 
 Png - PNG's an excellent fit for icons, technical diagrams, logos, etc but will take up more memory than a JPG.
 SVG - SVG's is a vector-based graphics format, meaning it can scale up or down to any dimension without loss of quality. Use when possible.
 Gif - GIF's are the go-to option for simple animations. Only real reason to use them.
+
+
+CSS
+
+Descendant combinators are separated by a space in CSS
+They allow you to style the children a certain parent element e.g:
+                               
+                               <div class="ancestor"> <!-- A -->
+                                  <div class="contents"> <!-- B -->             /* .ancestor .child / (.contents)
+                                    <div class="contents"> <!-- C -->               will apply to B and C but
+                                    </div>                                          not D */
+                                  </div>
+                                </div>
+
+                                <div class="contents"></div> <!-- D -->    
+
+There is no limit to how many descendant combinators you can use, as long as they have the same ancestors
+But it is generally best to not have too many for convenience.
+
+RGBA & HSLA
+
+RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the object.
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+
+                      #p1 {background-color: rgba(255, 0, 0, 0.3);}   /* red with opacity */
+                      #p2 {background-color: rgba(0, 255, 0, 0.3);}   /* green with opacity */
+                      #p3 {background-color: rgba(0, 0, 255, 0.3);}   /* blue with opacity */
+
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the object.
+HSL stands for hue, saturation, and lightness - and represents a cylindrical-coordinate representation of colors.
+HUE is a degree on the color wheel (from 0 to 360) - 0 (or 360) is red, 120 is green, 240 is blue. 
+SATURATION is a percentage value; 0% means a shade of gray and 100% is the full color. 
+LIGHTNESS is also a percentage; 0% is black, 100% is white.
+
+                      #p1 {background-color: hsl(120, 100%, 50%);}   /* green */
+                      #p2 {background-color: hsl(120, 100%, 75%);}   /* light green */
+                      #p3 {background-color: hsl(120, 100%, 25%);}   /* dark green */
+                      #p4 {background-color: hsl(120, 60%, 70%);}    /* pastel green */
+
+IMAGES 
+
+If you wanted to adjust the size of the image without causing it to lose its proportions, 
+you would use a value of “auto” for the height property and adjust the width value like so:
+
+                                              img {
+                                                height: auto;
+                                                width: 500px;
+                                              }
+
+It's best to always use these values as it will take longer to load otherwise, and won't shift the contents when it DOES load in.
+
+SPECIFICITY
+
+CSS that is more SPECIFIC will take precedence. The order goes:
+
+1 ID Selector             - Most specific
+2 Class Selector
+3 Type Selector
+4 Anything else           - Least specific
