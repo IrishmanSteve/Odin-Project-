@@ -1,0 +1,29 @@
+SHORTCUTS
+CTRL + Shift + C or F12 opens and closes the inspect menu
+CTRL + Shift + P opens up the command menu for shortcuts such ">bottom" which will move the inspect window to the bottom
+CTRL + F lets you search for a word, or even just a type of element
+CTRL + Shift + J opens the console panel to view messages and run javascript.
+While in the command/shortcut menu, you can search for "animations" to adjust anything animated.
+If you want to show someone your work you can type into the command menu "screenshot" and you'll get 4 options:
+    Capture screenshot - Your viewport.
+    Full size screenshot - The whole page.
+    Area screenshot - An area you want to capture that is drawn by you.
+    Node screenshot - One element on its own.
+
+WORKFLOW
+DevTools is a good way to prototype CSS in that, instead of writing it in an editor, saving it, going the webspage, refreshing the webpage just to test
+a different color or something, just can just edit in it browser with DevTools and speed up your workflow.
+Also if, while doing this you forget the property to make something BOLD or italic, you can just type either 'bold' or 'italic' and it will auto-complete.
+If you want to make something bigger/smaller, there are keyboard shortcuts like Shift + Up/Down that will make it 10 pixels bigger/smaller
+g
+PSUEDO-CLASSES
+Psuedo-classes can be toggled based on their state in the top right of the 'styles' section in the inspect tool named ":hov" for elements that change
+when they are hovered over / clicked etc. You can also right click and go to 'force state'.
+Beside the :hov tab, is the .cls tab which is used for searching for a particular class, or adding a new one. This can be really useful if you want to use
+styles borrowed from another element e.g. you have one element with a class of 'bold', you can inspect another element and GIVE it those properties by 
+searching for the 'bold' class.
+
+TAKING STYLES FROM ELSEWHERE
+if you see something styled in a way that you like and want to use a similar version, inspect it, right click on text > copy > copy styles.
+If you right click on an element in the inspect menu, you can then click "edit as HTML" and add in whatever you want to it and it will keep
+the same styles and properties as its sister elements.
