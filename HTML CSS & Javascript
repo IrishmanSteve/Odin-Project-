@@ -90,3 +90,10 @@ External - Creating a separate stylesheet and putting it in the head element in 
 Internal - This is done in the HTML <head> & <style> elements. The formatting is the same but the file is bigger & it looks untidy. Syntax is the same.
 Inline - This takes priority & could be useful for a single element with unique styling but it's not recommended as it's messy and doesn't read well.
 
+MARGINS
+
+Margins can collapse (join into one value) if two margins are beside one another e.g. 
+                        - ele A has bottom margin of 20px 
+                        - ele B has top margin of 30px
+                        - total margin difference will be biggest value of the 2, so 30px this time
+                        - The values DO NOT combine
