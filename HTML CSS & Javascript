@@ -12,7 +12,7 @@ IMAGE FORMATS
 
 Jpg - JPG's are designed for handling large color palettes without exorbitantly increasing file size.
 Png - PNG's an excellent fit for icons, technical diagrams, logos, etc but will take up more memory than a JPG.
-SVG - SVG's is a vector-based graphics format, meaning it can scale up or down to any dimension without loss of quality. Use when possible.
+SVG - SVG's is a vector-based graphics format, meaning it can scale up or down to any dimensionsize, and place the various elements. Flexbox is a very powerful tool. without loss of quality. Use when possible.
 Gif - GIF's are the go-to option for simple animations. Only real reason to use them.
 
 
@@ -97,3 +97,30 @@ Margins can collapse (join into one value) if two margins are beside one another
                         - ele B has top margin of 30px
                         - total margin difference will be biggest value of the 2, so 30px this time
                         - The values DO NOT combine
+
+FLEXBOX
+
+If a container has display: flex; it's children will be flex items e.g.
+
+- if you had 3 div ele and thier parent had a ' display: flex; ' they'd each take up 33% of thier parent container
+- if you added another, they'd automatically take up 25% each
+
+Flex Shorthand
+
+To write ' flex: 1; ' is to shorthand write:
+- flex-grow: 1 
+- flex-shrink: 1 
+- flex-basis: 0
+
+Flex-grow expects a single number as its value, and that number is used as the flex-item’s “growth factor”. 
+When we applied flex: 1 to every div inside our container, we were telling every div to grow the same amount. 
+The result of this is that every div stays the exact same size. 
+If we instead add flex: 2 to just one of the divs, then that div would grow to 2x the size of the others.
+
+flex-shrink is similar to flex-grow. 
+flex-shrink only ends up being applied if the size of all flex items is LARGER than their parent container. 
+For example, if 3 divs had a width declaration like: width: 100px, and .flex-container was smaller than 300px, the divs would have to shrink to fit.
+The default shrink factor is flex-shrink: 1, which means all items will shrink evenly. 
+If you DO NOT want an item to shrink then you can specify flex-shrink: 0.
+
+Flex basis is 
