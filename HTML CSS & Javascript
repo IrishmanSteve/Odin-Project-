@@ -152,5 +152,18 @@ Flex-direction can impact the axis that these are applied on.
 To style the children themselves, and individually, you use " align-self "
 
 GAP
+Gap is a fairly new property but it sets the gap between an element's cihldren.
+It works the same as padding or margin but saves you typing out margin-left, margin-right etc.
+
+USE-CASE
+Flexbox is all about controlling the distribution of elements in a row or column.
+If set to row, primary axis is left > right, and if column, top > bottom.
+In Flexbox, all of the rules are structured around the primary axis. (Then the perpendicular cross axis).
+The children will be positioned by default according to the following 2 rules:
+
+Primary axis: Children will be bunched up at the start of the container - for rows, on the left. For columbs, at the top.
+Cross axis: Children will stretch out to fill the entire container - For rows, this'll be vertical. For columbs, horizontal.
+
+Grid is
 
 
