@@ -144,3 +144,13 @@ Similar to flex: initial but does not allow items to shrink, even in overflow si
 FLEX: <POSITIVE NUMBER> - Equivalent to " flex: <positive number> 1 0 "
 An item that receives the specified proportion of the free space in the flex container. 
 If all items in the flex container use this pattern, their sizes will be proportional to the specified flex factor.
+
+If flex-direction is set to column, the flex basis value for the children then refers to HEIGHT instead of WIDTH.
+Justify-content and align-items both apply to the children and impact the axes. (X & Y)
+They should be used together to get their children completely central.
+Flex-direction can impact the axis that these are applied on.
+To style the children themselves, and individually, you use " align-self "
+
+GAP
+
+
