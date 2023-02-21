@@ -124,6 +124,7 @@ The default shrink factor is flex-shrink: 1, which means all items will shrink e
 If you DO NOT want an item to shrink then you can specify flex-shrink: 0.
 
 Flex-BASIS sets the initial size of a flex item, so any sort of flex-growing or flex-shrinking starts from that baseline size. 
+Depending on the primary axis, it'll be width/height of the item/s.
 The shorthand value defaults to flex-basis: 0%.
 If the basis is set to 0, items would ignore the item’s width, and everything would shrink/grow evenly.
 If the basis is set to auto, items will check for a width declaration.
@@ -164,6 +165,10 @@ The children will be positioned by default according to the following 2 rules:
 Primary axis: Children will be bunched up at the start of the container - for rows, on the left. For columbs, at the top.
 Cross axis: Children will stretch out to fill the entire container - For rows, this'll be vertical. For columbs, horizontal.
 
-Grid is
+LAYOUT MODE
+The default mode is Flow Layout
 
+With Flow Layout, if you gave a property a width of 2000px, it would travel outside of the viewport until it meets that, which can look messy.
+In Flexbox, properties like "width" and "height" will be met IF THEY CAN. If not, they will just fill the space that they can.
 
+LINK TO USEFUL FLEXBOX STUFF INCASE I FORGET - https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
