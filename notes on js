@@ -17,3 +17,5 @@ Conversely, every number has a method called toString() that converts it to a st
               const myNum2 = 123;                   - Number
               const myString2 = myNum2.toString();  - Converting to String
               console.log(typeof myString2);        - Prints String
+
+String methods: https://www.w3schools.com/jsref/jsref_obj_string.asp 
