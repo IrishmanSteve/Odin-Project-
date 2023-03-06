@@ -1,1 +1,19 @@
 The UNARY plus " + " operator turns a string like "42" and turns it into a number like 42.
+The .prompt() function creates a prompt on the window and stores it in the given variable e.g:
+              
+              function greet() {
+                const name = prompt("What is your name?");        - will store the answer in the variable "name"
+                alert(`Hello ${name}, nice to see you!`);         - will give popup message using the placeholder name
+              }
+
+The Number() function converts anything passed to it into a number, if it can:
+              
+              const myString = "123";               - String
+              const myNum = Number(myString);       - Converting to Num
+              console.log(typeof myNum);            - Prints number
+
+Conversely, every number has a method called toString() that converts it to a string:
+              
+              const myNum2 = 123;                   - Number
+              const myString2 = myNum2.toString();  - Converting to String
+              console.log(typeof myString2);        - Prints String
