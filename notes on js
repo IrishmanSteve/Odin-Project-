@@ -19,3 +19,7 @@ Conversely, every number has a method called toString() that converts it to a st
               console.log(typeof myString2);        - Prints String
 
 String methods: https://www.w3schools.com/jsref/jsref_obj_string.asp 
+
+Cascade Layers can help you to see the priority of the Cascade. Higher number meaning higher specificity.
+
+where im at https://developer.chrome.com/docs/devtools/css/reference/#change
