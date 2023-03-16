@@ -22,4 +22,8 @@ String methods: https://www.w3schools.com/jsref/jsref_obj_string.asp
 
 Cascade Layers can help you to see the priority of the Cascade. Higher number meaning higher specificity.
 
-where im at https://developer.chrome.com/docs/devtools/css/reference/#change
+keyboard shortcuts when editing values in devtools:
+Incrementing/decrementing by 0.1 = ALT + UP/DOWN
+Incrementing/decrementing by 1   = UP/DOWN
+Incrementing/decrememting by 10  = SHIFt + UP/DOWN
+Incrementing/decrimenting by 100 = CTRL + UP/DOWN
