@@ -27,3 +27,11 @@ Incrementing/decrementing by 0.1 = ALT + UP/DOWN
 Incrementing/decrementing by 1   = UP/DOWN
 Incrementing/decrememting by 10  = SHIFt + UP/DOWN
 Incrementing/decrimenting by 100 = CTRL + UP/DOWN
+
+LOOPS 
+
+For loops look like this:   for (let i = 0; i < thing.length; i++) {                The advantages to this are:
+                            // *code to be executed*                                - Direct control over the index variable, which allows you to perform
+                            }                                                         specific operations based on the index value
+                                                                                    - You can repeat code a specified no. of times. 
+                                                                                    - 
