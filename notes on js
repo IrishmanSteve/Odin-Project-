@@ -35,3 +35,28 @@ For loops look like this:   for (let i = 0; i < thing.length; i++) {            
                             }                                                         specific operations based on the index value
                                                                                     - You can repeat code a specified no. of times. 
                                                                                     - 
+PROPAGATION, CAPTURE AND BUBBLING
+
+Event propagation in JavaScript refers to how events like clicks or key presses move through the elements in a webpage's structure. 
+It helps you control event handling across elements. 
+
+There are two phases: - BUBBLING (from target back up)   - Not setting CAPTURE will make it BUBBLE.                              // ele > div > body
+                      - CAPTURE (from top to target)     - Setting CAPTURE: true will show you the pathing to the target.        // body > div > ele
+
+Use stopPropagation() to prevent an event from moving further in either direction. i.e. stop capturing/bubbling.                 // ele
+
+ONCE
+
+    button.addEventListener('click', () => {
+      console.log('Button clicked once');
+    }, { once: true });
+
+The first argument ('click') is the event type. In this case, it's the 'click' event, which means the event listener will be triggered when the button is clicked.
+
+The second argument is the callback function. It's the function that gets executed when the specified event occurs. In your example, it's an arrow function that logs a message to the console when the button is clicked.
+
+The third argument is an options object. This is where you can provide additional settings for the event listener. The once: true property in this object is a special option that tells the event listener to execute only once and then automatically remove itself after being triggered.
+
+So, when the button is clicked, the provided callback function will be executed, and since { once: true } is specified, the event listener will be removed immediately after that first execution. This ensures that the callback function is only executed once, even if the button is clicked multiple times.
+
+In summary, the options object with { once: true } is used to control the behavior of the event listener, specifying that it should only run once and then be automatically removed.
