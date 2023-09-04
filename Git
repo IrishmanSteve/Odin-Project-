@@ -108,3 +108,23 @@ An Atomic Commit is a commit that includes changes related to only one feature o
 There are 2 main reasons for doing this: 
 - if something you change causes some problems, it's easy to revert the specific change without losing other changes; 
 - it enables you to write better commit messages
+
+
+GIT BRANCHING
+
+git branch branch_name      - will make a new branch named "branch_name"
+
+git checkout branch_name    - will switch to that branch that was created named "branch_name"
+
+git checkout -b branch_name - will create a branch named "branch_name" and immediately switch to that branch.
+
+git branch                  - will let you see all of your current branches AND confirm which branch you are in with an * like so     - git branch
+                                                                                                                                        main
+                                                                                                                                      * branch_name
+
+git merge "branch_name"     - will take the changes you’ve committed in branch_name and add them to the branch that you’re currently on
+
+git branch -d "branch_name" - will delete the branch if it HAS already been merged into main
+git branch -D <branch_name> - will delete the branch even if it HASN'T been merged into main
+
+Branches should be deleted once you've done with them as they can pile up and make it more difficult to find the branch you’re looking for when you need it.
